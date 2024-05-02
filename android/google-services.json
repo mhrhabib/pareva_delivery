@@ -1,81 +1,45 @@
 {
   "project_info": {
-    "project_number": "151878495365",
-    "project_id": "we-courier-81101",
-    "storage_bucket": "we-courier-81101.appspot.com"
+    "project_number": "355415826812",
+    "project_id": "pareva-e14d9",
+    "storage_bucket": "pareva-e14d9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:151878495365:android:2510842ed9330bba260dec",
+        "mobilesdk_app_id": "1:355415826812:android:e125cda3831749eec3c4f9",
         "android_client_info": {
-          "package_name": "we.courier.com"
+          "package_name": "ca.pareva.delivery"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "151878495365-4bjlatlv7n69g0mt9p8jkn9ht617dnho.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "we.courier.com",
-            "certificate_hash": "2a2b4092fee0c63cb0330a61d92a3cf33d2453f0"
-          }
-        },
-        {
-          "client_id": "151878495365-2mq57il22c9k8ndg4pr3qpb4b0s10krq.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC4eeGsY6mChg4mRYJwB44qbE3mlS2ztHY"
+          "current_key": "AIzaSyDvb9CjqamR5CCosPpNXdxCDGGUqbULdMA"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "151878495365-2mq57il22c9k8ndg4pr3qpb4b0s10krq.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:151878495365:android:5b764907ada4c951260dec",
+        "mobilesdk_app_id": "1:355415826812:android:32096f537465f58fc3c4f9",
         "android_client_info": {
-          "package_name": "wecourier.delivery.com"
+          "package_name": "ca.pareva.merchant"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "151878495365-gv2vbrqevddffa5gdoj8a9f2c7eokne7.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "wecourier.delivery.com",
-            "certificate_hash": "2a2b4092fee0c63cb0330a61d92a3cf33d2453f0"
-          }
-        },
-        {
-          "client_id": "151878495365-2mq57il22c9k8ndg4pr3qpb4b0s10krq.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyC4eeGsY6mChg4mRYJwB44qbE3mlS2ztHY"
+          "current_key": "AIzaSyDvb9CjqamR5CCosPpNXdxCDGGUqbULdMA"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "151878495365-2mq57il22c9k8ndg4pr3qpb4b0s10krq.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

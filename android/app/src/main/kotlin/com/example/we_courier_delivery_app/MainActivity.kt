@@ -1,4 +1,4 @@
-package wecourier.delivery.com
+package ca.pareva.delivery
 
 import io.flutter.embedding.android.FlutterActivity
 

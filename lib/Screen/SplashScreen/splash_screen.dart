@@ -31,8 +31,8 @@ class _SplashScreenState extends State<SplashScreen> {
     });
     Timer(
       const Duration(seconds: 2),
-      () => {
-        logInCheck(),
+      () {
+        logInCheck();
       },
     );
     super.initState();
