@@ -29,12 +29,12 @@ class DashboardController extends GetxController {
     super.onInit();
   }
 
-  getDashboard() {
+  getDashboard() async {
     deliveredList = <Delivered>[];
     deliverymanReScheduleList = <DeliverymanReSchedule>[];
     deliverymanAssignList = <DeliverymanAssign>[];
     returnToCourierList = <ReturnToCourier>[];
-    server.getRequest(endPoint: APIList.dashboard).then((response) {
+    await server.getRequest(endPoint: APIList.dashboard).then((response) {
       if (response != null && response.statusCode == 200) {
         dashboardLoader = false;
         final jsonResponse = json.decode(response.body);
@@ -52,7 +52,7 @@ class DashboardController extends GetxController {
     });
   }
 
-  changeStatus(context,parcelId,pickedSignatureImage,image) {
+  changeStatus(context, parcelId, pickedSignatureImage, image) async {
     dashboardLoader = true;
     print(pickedSignatureImage);
     print(image);
@@ -64,22 +64,15 @@ class DashboardController extends GetxController {
       'note': noteController.text,
     };
     print(body);
-    try{
-      server
-          .multipartFileRequest(
-          endPoint: APIList.changeStatus,
-          body: body,
-          filepath: image,
-          pickedSignatureImage: pickedSignatureImage,
-          type: true)
-          .then((response) {
+    try {
+      await server.multipartFileRequest(endPoint: APIList.changeStatus, body: body, filepath: image, pickedSignatureImage: pickedSignatureImage, type: true).then((response) {
         if (response != null) {
           getDashboard();
           Get.rawSnackbar(
             snackPosition: SnackPosition.TOP,
             title: 'Change Status',
             message: 'Status Successfully',
-            backgroundColor:CupertinoColors.activeGreen.withOpacity(.9),
+            backgroundColor: CupertinoColors.activeGreen.withOpacity(.9),
             margin: const EdgeInsets.only(bottom: 20, left: 20, right: 20),
           );
           dashboardLoader = false;
@@ -89,12 +82,10 @@ class DashboardController extends GetxController {
           update();
         }
       });
-    }catch(e)
-    {
+    } catch (e) {
       Get.log(e.toString());
       dashboardLoader = false;
       update();
     }
-
   }
 }

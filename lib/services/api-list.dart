@@ -1,6 +1,6 @@
 class APIList {
-  static String? mainUrl = "https://pareva.ca/login";
-  static String? apiUrl = "pareva.ca/login";
+  static String? mainUrl = "https://pareva.ca/";
+  static String? apiUrl = "pareva.ca";
   static String? mapGoogleApiKey = "AIzaSyC0GzJAatQuahgY5njje5ZpD1BFh_y8-Bo";
 
   static String? server = "${mainUrl}api/v10/";
@@ -25,5 +25,4 @@ class APIList {
   static String? paymentParcelLogs = "${server!}deliveryman/parcel-payment-logs";
   static String? changeStatus = "${server!}deliveryman/parcel-status-update";
   static String? updateLocation = "${server!}deliveryman/parcel-location-update";
-
 }

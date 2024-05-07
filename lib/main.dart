@@ -1,3 +1,5 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
+
 import '/Screen/Widgets/constant.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +11,7 @@ import 'package:get_storage/get_storage.dart';
 import 'Controllers/global-controller.dart';
 import 'Locale/language.dart';
 import 'Screen/SplashScreen/splash_screen.dart';
+import 'services/firebase_api.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +23,19 @@ Future<void> main() async {
     authDomain: 'pareva-e14d9.appspot.com',
   );
   await Firebase.initializeApp(name: 'courier', options: firebaseOptions);
+
+  await FirebaseApi().initNotifications();
+  await FirebaseApi().setupFlutterLocalNotifications();
+
+  await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(
+    alert: true,
+    badge: true,
+    sound: true,
+  );
+  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+    FirebaseApi().showFlutterNotification(title: message.notification!.title!, body: message.notification!.body!);
+    print("hello");
+  });
   final box = GetStorage();
   await GetStorage.init();
   dynamic langValue = const Locale('en', 'US');
